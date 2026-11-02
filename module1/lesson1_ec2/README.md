@@ -68,7 +68,7 @@ This allows me to complete all seven runs across three separate days while follo
 | Run | Date | Time zone | Instance ID | Boot time (UTC) | Public IPv4 DNS | Screenshot | Terminated? |
 |---|---|---|---|---|---|---|---|
 | 1 | 2026-11-01 | America/Toronto | i-0f3ab975037e7478b | 2026-11-02 02:13:34 | ec2-18-204-225-190.compute-1.amazonaws.com | [lab1_run1.jpg](screenshots/lab1_run1.jpg) | Yes |
-| 2 | 2026-11-01 | America/Toronto | i-06ddeb2118ab43260 | 2026-11-02 03:04:04 | ec2-18-212-215-49.compute-1.amazonaws.com | [lab1_run2.jpg](screenshots/lab1_run2.jpg) | Pending confirmation |
+| 2 | 2026-11-01 | America/Toronto | i-06ddeb2118ab43260 | 2026-11-02 03:04:04 | ec2-18-212-215-49.compute-1.amazonaws.com | [lab1_run2.jpg](screenshots/lab1_run2.jpg) | Yes |
 | 3 | 2026-11-01 | America/Toronto | i-062c5efc28314067 | 2026-11-02 03:18:10 | ec2-54-160-239-62.compute-1.amazonaws.com | [lab1_run3.jpg](screenshots/lab1_run3.jpg) | Yes |
 | 4 | Planned: 2026-11-02 | America/Toronto | Pending | Pending | Pending | Pending | Pending |
 | 5 | Planned: 2026-11-02 | America/Toronto | Pending | Pending | Pending | Pending | Pending |
