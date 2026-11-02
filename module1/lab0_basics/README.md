@@ -53,7 +53,7 @@
 |---|---|---|---|---|
 | 1 | 54.147.27.218 | Git Bash SSH | [deployment-1.png](screenshots/deployment-1.png) | Yes |
 | 2 | 54.91.95.226 | Git Bash SSH | [deployment-2.png](screenshots/deployment-2.png) | Yes |
-| 3 | Pending | Pending | Pending | Pending |
+| 3 | 3.91.215.157 | Git Bash SSH | [deployment-3.png](screenshots/deployment-3.png) | Yes |
 
 **Deployment 1**
 
@@ -76,4 +76,171 @@ For my second deployment, I reused the same launch template from the first deplo
 
 I initially entered the public DNS address without the SSH command, which gave me a command not found error. After correcting the command, I connected successfully and the SEIR dashboard appeared automatically.
 
-The dashboard showed 2 vCPUs, around 0% CPU usage, 175 Mi
+The dashboard showed 2 vCPUs, around 0% CPU usage, 175 MiB of memory used out of 913 MiB, 21% disk usage, and an uptime of approximately 6 minutes.
+
+I saved the screenshot and uploaded it to my GitHub repository. I also ran into a small issue when adding the screenshot to Git because I used the wrong file path. After correcting the path, I was able to commit and push it successfully.
+
+I terminated the second instance after finishing.
+
+**Deployment 3**
+
+**Instance ID:** `i-018003f32648ba864`  
+**Instance Type:** `t3.micro`  
+**Availability Zone:** `us-east-1b`  
+**Public IPv4:** `3.91.215.157`
+
+For my third deployment, I used the same launch template again to launch a new EC2 instance. I connected through Git Bash using SSH with my private key and the new public DNS address.
+
+This time, I was more familiar with the process and didn't run into the same issues I had during the first two deployments. The SEIR dashboard appeared automatically after I connected.
+
+The dashboard showed 2 vCPUs, around 0% CPU usage, 173 MiB of memory used out of 913 MiB, 21% disk usage, and an uptime of approximately 7 minutes.
+
+I captured the screenshot and saved it as `deployment-3.png` in my homework folder. I then terminated the instance after finishing.
+
+After repeating the process three times, I have a better understanding of how to use an EC2 launch template and connect to a Linux server through SSH. I also feel more comfortable navigating Git Bash and following the deployment process without having to configure everything from scratch.
+
+
+
+**4. System Metrics**
+
+The following metrics were recorded during Deployment 1.
+
+| Metric | Observed Value |
+|---|---|
+| CPU | Approximately 0% busy |
+| vCPUs | 2 |
+| Memory | 179 MiB used / 913 MiB total |
+| Root Disk | 1.7 GiB used / 8.0 GiB total |
+| Disk Usage | 21% |
+| Uptime | Approximately 12 minutes |
+| Load Average | 0.03, 0.03, 0.03 |
+
+**CPU and vCPUs:** CPU utilization indicates how busy the processor is. vCPUs represent the virtual processing resources allocated to the instance.
+
+**Memory:** RAM used by the operating system and running processes.
+
+**Disk Usage:** Storage space consumed on the instance's filesystem.
+
+**Uptime:** How long the operating system has been running.
+
+**Load Average:** The average system workload over 1, 5, and 15 minutes.
+
+**5. Troubleshooting**
+
+**Problem 1 — SSH Key File Location**
+
+I initially had difficulty locating my downloaded SSH private key because I was using an incorrect file path.
+
+**Diagnosis:** Git Bash returned a file-not-found error.
+
+**Resolution:** I located the key in `/c/downloads` and ran:
+
+```bash
+ls -l seir-lab0-key.pem
+chmod 400 seir-lab0-key.pem
+```
+
+**Lesson:** Confirm the current directory and file location before executing commands.
+
+**Problem 2 — First SSH Connection**
+
+During my first connection, SSH asked whether I trusted the server's host key.
+
+After entering the full response `yes`, the host key was saved locally and the connection succeeded.
+
+**Lesson:** SSH uses host keys to help verify server identity. Host fingerprints should be checked against a trusted source before acceptance.
+
+**Problem 3 — Screenshot Organization**
+
+I initially had difficulty finding the correct folder for my screenshot.
+
+**Resolution:** I saved the image as `deployment-1.png` inside `module1/lab0_basics/screenshots/` and verified it using `ls`.
+
+**Lesson:** Proper filenames and folder organization are important for reproducible documentation and assignment evidence.
+
+**Problem 4 — Incorrect SSH Command and Git File Path (Deployment 2)**
+
+During my second deployment, I initially entered the EC2 public DNS address by itself instead of using the full SSH command. Git Bash returned a command not found error.
+
+I corrected the command and was able to connect to the instance.
+
+I also made a mistake when uploading my second screenshot to GitHub. I was already inside the `lab0_basics` folder but included the full folder structure again when running `git add`.
+
+Git could not find the file, so I corrected the command to:
+
+```bash
+git add screenshots/deployment-2.png
+```
+
+After that, I committed and pushed the screenshot successfully.
+
+**Lesson:** I need to pay attention to my current directory and make sure I use the correct command and file path.
+
+**6. Lessons Learned**
+
+**What I understood:**
+
+- The difference between an EC2 instance and a launch template.
+- How to access a remote Linux server using SSH.
+- How public IPv4 addresses identify internet-reachable endpoints.
+- How User Data configures a server during startup.
+- How to interpret basic system metrics.
+- How to save, commit, and push deployment evidence to GitHub.
+
+**What became easier through repetition:**
+
+During the second deployment, I was more familiar with the process of launching an instance from an existing template and connecting through SSH. I didn't need to configure everything again because the launch template already had the settings saved.
+
+I also became more comfortable using Git Bash and correcting mistakes in my commands.
+
+I still need more practice with Linux file paths, but I understand better why checking my current directory matters.
+
+By the third deployment, I was more comfortable with the steps and knew where to find the SSH connection instructions. I was also able to use the same launch template without creating another configuration. Repeating the process helped me understand how the different AWS settings work together.
+
+**What I would do differently:**
+
+I would organize and verify my SSH key location before attempting to connect, and prepare my screenshot directory before launching an instance.
+
+**7. Security and Cost Management**
+
+**SSH Key Handling:** Private SSH keys should remain on my local computer and never be committed to GitHub. I used `chmod 400` to restrict access to my key file.
+
+**Security Groups:** SSH access should be limited to trusted IP addresses rather than unnecessarily allowing the entire internet.
+
+**EC2 Termination:** Deployments 1 and 2 were terminated after their evidence was collected. Deployment 3 termination has not yet been confirmed.
+
+**Resource Cleanup:** I retained the launch template for reuse. EBS volume and Elastic IP cleanup verification remains to be documented.
+
+**AWS Costs:** A launch template does not incur EC2 compute charges simply by existing. Running instances, storage, and public IPv4 usage may incur charges depending on account benefits and usage.
+
+**8. Future Learning Notes**
+
+This section will be expanded throughout SEIR Foundations.
+
+**Linux Commands to Practice**
+
+- `pwd` — Display the current directory
+- `ls` — List files and folders
+- `cd` — Change directories
+- `mkdir` — Create directories
+- `chmod` — Modify file permissions
+- `cat` — Display file contents
+- `ssh` — Connect to a remote system
+- `find` — Locate files and directories
+
+**EC2 Concepts to Revisit**
+
+- AMIs and instance types
+- Launch templates and versioning
+- Security groups and VPC networking
+- Public versus private IP addresses
+- EC2 instance lifecycle
+- User Data and cloud-init
+
+**Ideas for Future Automation**
+
+- Provision EC2 infrastructure using Terraform.
+- Automate configuration using Bash scripts.
+- Implement automated infrastructure testing.
+- Monitor EC2 resources using Amazon CloudWatch.
+- Use CI/CD pipelines to deploy infrastructure changes.
