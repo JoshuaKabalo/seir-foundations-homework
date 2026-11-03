@@ -61,9 +61,9 @@
 
 Each run requires a brand-new EC2 instance. I have to complete Steps 0–4 manually, record the instance information, and take a screenshot showing the identity command and the Uvicorn startup message.
 
-I completed Runs 1–3 on November 1, 2026, and Runs 4–6 on November 2, 2026. Run 7 is scheduled for November 3 before the assignment deadline.
+I completed Runs 1–3 on November 1, 2026, Runs 4–6 on November 2, 2026, and Run 7 on November 3, 2026.
 
-So far, I have completed six deployments on six different EC2 instances, with no more than three lab-run screenshots on either day. The seventh run will complete the required three-day schedule.
+I completed seven deployments on seven different EC2 instances across three days, with no more than three lab-run screenshots on any one local date.
 
 | Run | Date | Time zone | Instance ID | Boot time (UTC) | Public IPv4 DNS | Screenshot | Terminated? |
 |---|---|---|---|---|---|---|---|
@@ -73,7 +73,7 @@ So far, I have completed six deployments on six different EC2 instances, with no
 | 4 | 2026-11-02 | America/Toronto | i-05a8b6de9632e95e8 | 2026-11-02 23:04:42 | ec2-54-89-146-84.compute-1.amazonaws.com | [lab1_run4.jpg](screenshots/lab1_run4.jpg) | Yes |
 | 5 | 2026-11-02 | America/Toronto | i-02d3311b6820b5f87 | 2026-11-02 23:19:19 | ec2-54-145-22-226.compute-1.amazonaws.com | [lab1_run5.jpg](screenshots/lab1_run5.jpg) | Yes |
 | 6 | 2026-11-02 | America/Toronto | i-0dc82731091d782e4 | 2026-11-02 23:32:59 | ec2-3-94-169-138.compute-1.amazonaws.com | [lab1_run6.jpg](screenshots/lab1_run6.jpg) | Yes |
-| 7 | Planned: 2026-11-03 | America/Toronto | Pending | Pending | Pending | Pending | Pending |
+| 7 | 2026-11-03 | America/Toronto | i-038cae3216777fabe | 2026-11-03 05:31:37 | ec2-54-89-190-8.compute-1.amazonaws.com | [lab1_run7.jpg](screenshots/lab1_run7.jpg) | Pending confirmation |
 
 **Deployment 1**
 
@@ -191,13 +191,24 @@ The terminal displayed `Application startup complete.`, confirming a successful 
 
 I captured the identity and startup output at 6:38:38 PM Toronto time, saved `lab1_run6.jpg`, and terminated the instance. By this run, I had repeated the deployment process six times across two days.
 
-**Deployment 7 — Planned**
+**Deployment 7**
 
-I plan to complete the seventh and final run on November 3, 2026, using one more fresh EC2 instance. I will fill in its instance ID, boot time, DNS name, screenshot, and termination status after completing the actual deployment.
+**Instance ID:** `i-038cae3216777fabe`  
+**Instance Type:** `t3.micro`  
+**Public IPv4:** `54.89.190.8`  
+**Boot Time (UTC):** `2026-11-03 05:31:37`
+
+For my seventh deployment, I launched another fresh EC2 instance and repeated the Balerica Legacy Bank setup. I activated the Python virtual environment, ran the required identity command, and started Uvicorn.
+
+The terminal displayed `Application startup complete.`, confirming that the banking application started successfully. I captured the identity and startup output at 12:48:09 AM Toronto time on November 3, 2026.
+
+**Exact output:** `INFO:     Started server process [34135]`
+
+I captured the screenshot for `lab1_run7.jpg`. This completed my seven application startups across three days. **Termination status:** Pending confirmation.
 
 **4. Application and System Verification**
 
-I successfully started the banking application on six separate EC2 instances. The checks below reflect the terminal output captured during the deployments.
+I successfully started the banking application on seven separate EC2 instances. The checks below reflect the terminal output captured during the deployments.
 
 | Check | Observed Result |
 |---|---|
@@ -208,20 +219,21 @@ I successfully started the banking application on six separate EC2 instances. Th
 | Bank Accounts Exported | 3 per installation |
 | Alice's Account Lookup | Verified on Runs 1, 2, 4 and 5 |
 | Alice's Balance | $5,000.00 USD |
-| Python Virtual Environment | Activated on Runs 1–6 |
+| Python Virtual Environment | Activated on Runs 1–7 |
 | Run 1 Uvicorn Process ID | 34185 |
 | Run 2 Uvicorn Process ID | 33762 |
 | Run 3 Uvicorn Process ID | 32598 |
 | Run 4 Uvicorn Process ID | 33827 |
 | Run 5 Uvicorn Process ID | 32600 |
 | Run 6 Uvicorn Process ID | 32540 |
-| FastAPI Startup | Successful on Runs 1–6 |
+| Run 7 Uvicorn Process ID | 34135 |
+| FastAPI Startup | Successful on Runs 1–7 |
 
 **COBOL Account Lookup:** I used the COBOL program to retrieve account information from the bank's ledger.
 
 **Python Virtual Environment:** I activated the environment so the application could use its installed Python packages.
 
-**Uvicorn:** I started the FastAPI server on port 8000 and confirmed that the application completed startup on all six instances.
+**Uvicorn:** I started the FastAPI server on port 8000 and confirmed that the application completed startup on all seven instances.
 
 **5. COBOL Practice Evidence**
 
@@ -307,7 +319,7 @@ I also became more comfortable checking the terminal output before moving to the
 
 I would check each command's output before moving to the next step and make sure I understand which directory I'm working in.
 
-During Run 4, I learned not to skip the installation and environment setup steps. Runs 5 and 6 helped reinforce the full sequence. I will document any additional lessons after the final deployment.
+During Run 4, I learned not to skip the installation and environment setup steps. Runs 5, 6, and 7 helped reinforce the full sequence and the importance of repeating a deployment on fresh servers.
 
 **8. Security and Cost Management**
 
@@ -315,7 +327,7 @@ During Run 4, I learned not to skip the installation and environment setup steps
 
 **Security Groups:** SSH access should be restricted to trusted IP addresses.
 
-**EC2 Termination:** I terminated all six completed lab instances after collecting the required deployment evidence.
+**EC2 Termination:** I terminated Runs 1–6 after collecting the required deployment evidence. Run 7 termination is pending confirmation.
 
 **Resource Cleanup:** EBS volume and Elastic IP cleanup verification is still pending.
 
@@ -323,7 +335,7 @@ During Run 4, I learned not to skip the installation and environment setup steps
 
 **9. Future Learning Notes**
 
-This section will be updated after the seventh and final deployment.
+After completing seven application startups on seven different EC2 instances, I became more familiar with the installation commands and the order required to configure a fresh server. Run 7 confirmed that I could repeat the startup procedure successfully on a new instance.
 
 **Linux Commands to Practice**
 

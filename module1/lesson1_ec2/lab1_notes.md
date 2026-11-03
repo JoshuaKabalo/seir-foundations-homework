@@ -126,6 +126,24 @@ Repeating the process helped me understand why these deployment steps need to be
 
 I saved the screenshot as `lab1_run6.jpg`, exited the SSH session, and terminated the instance.
 
+**Run 7 — November 3, 2026**
+
+**Instance ID:** `i-038cae3216777fabe`
+
+For my seventh run, I launched another fresh EC2 instance and repeated the Balerica Legacy Bank deployment process.
+
+I activated the Python virtual environment, ran the required identity command, and successfully started Uvicorn. The terminal displayed `Application startup complete.` without any errors during the startup.
+
+I captured the identity and application startup information at 12:48:09 AM Toronto time. Completing this final deployment helped me become more familiar with repeating the same installation process on different EC2 instances.
+
+**Exact output from Run 7:**
+
+`INFO:     Started server process [34135]`
+
+I captured the screenshot for `lab1_run7.jpg`. This completed my seven EC2 deployments across three different days.
+
+**Termination Status:** Pending confirmation.
+
 **2. COBOL Practice**
 
 **Instance Used:** Run 1  
@@ -346,4 +364,4 @@ I still want to understand how the FastAPI application communicates with the COB
 
 I also want to become more comfortable completing the installation steps without needing to look at the runbook as often.
 
-I have now completed six deployments across November 1 and November 2. I will complete the final deployment on November 3 and add its results to these notes.
+I have now completed seven EC2 deployments across November 1, November 2, and November 3. Repeating the deployment helped me become more familiar with Linux commands, installing application dependencies, and troubleshooting errors. I will continue practicing these skills as I work on future cloud engineering labs.
