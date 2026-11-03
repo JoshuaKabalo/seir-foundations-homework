@@ -142,7 +142,7 @@ I captured the identity and application startup information at 12:48:09 AM Toron
 
 I captured the screenshot for `lab1_run7.jpg`. This completed my seven EC2 deployments across three different days.
 
-**Termination Status:** Pending confirmation.
+**Termination Status:** Terminated.
 
 **2. COBOL Practice**
 
