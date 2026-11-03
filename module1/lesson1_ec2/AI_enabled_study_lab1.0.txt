@@ -1,0 +1,187 @@
+**Topic 1: Databases — Research Summary**
+
+What I learned: A database is used to store, manage, and retrieve information for applications. I learned that relational databases store data in tables with rows and columns, while non-relational databases use different models such as key-value, document, and graph. SQL databases are useful for structured information, complex relationships, and transactions, while NoSQL databases offer more flexibility depending on the application. AWS provides relational database services such as RDS and Aurora, along with NoSQL services such as DynamoDB and Neptune. I also learned that SQLite, PostgreSQL, MySQL, MariaDB, and SQL Server have different advantages depending on the application being built. PostgreSQL is useful because it supports complex queries, strong transaction handling, and JSON data, although managing larger deployments can require additional knowledge. During my Balerica Legacy Bank lab, SQLite was used because it is lightweight and doesn't require a separate database server. A large bank would usually require more advanced database infrastructure to support multiple users, transactions, and availability requirements. I can also apply these concepts to my Veltrivo Commerce business by choosing a database based on how I want to manage product research, inventory, and sales.
+
+**AI Research — SQLite vs. PostgreSQL**
+
+Prompt I asked the AI: Why would a teaching lab use SQLite instead of PostgreSQL, and what are PostgreSQL's strengths and weaknesses for banking applications?
+
+What I learned: I learned that SQLite is useful for teaching labs because it is lightweight, easy to install, and doesn't require a separate database server. During the Balerica Legacy Bank lab, SQLite allowed us to focus on deploying the application rather than managing a database server. PostgreSQL is more suitable for many banking applications because it supports multiple concurrent transactions, strong data integrity, and advanced security features. However, PostgreSQL requires more configuration, administration, and performance optimization.
+
+One thing the AI said that I double-checked: The AI explained that SQLite is commonly used for teaching because of its simplicity. I checked SQLite's official documentation and confirmed that education and training are listed as appropriate uses. I also learned that client-server databases are generally better when an application requires many simultaneous database writes.
+
+Source: SQLite — Appropriate Uses for SQLite
+https://www.sqlite.org/whentouse.html
+
+**Topic 2: COBOL Basics — Research Summary**
+
+**What is COBOL, and who introduced it?**
+
+COBOL stands for Common Business-Oriented Language. It is a verbose, easy-to-read programming language that was developed in 1959 and used in mainframe computing systems. It handles things like credit card transactions and airline ticketing systems. COBOL is a high-level, imperative, and procedural programming language. It contains over 600 reserved words, and every COBOL program follows an easy-to-understand hierarchy, starting with programs, divisions, sections, paragraphs, sentences, statements, and characters.
+
+COBOL also uses a fixed-column format with specific rules. The first six columns are used for line numbers, while column seven is used to identify comments. Columns 12–72 are where you write the actual code. The reason the code doesn't go beyond column 72 is that COBOL was originally designed around physical punch cards. Periods are also used to end sentences in COBOL, which contributes to its readable structure.
+
+**How was it first integrated into infrastructure (mainframes, government, banks)?**
+
+COBOL was first integrated into infrastructure during the 1960s through mainframe computers used by governments, banks, and businesses. The U.S. Department of Defense supported COBOL because it wanted a programming language that could work across different computer systems. Banks later adopted COBOL to process financial transactions, manage customer records, and automate accounting. Over time, COBOL became an important part of their infrastructure because these organizations continued depending on the systems they had built.
+
+**How many systems use COBOL today?**
+
+COBOL programs are still used globally by governments and various industries, including retail, travel, finance, and healthcare.
+
+**What is the value of the systems that run on COBOL (transactions, money, records)?**
+
+The value of COBOL systems is the money they help process, the financial transactions they handle, and the important records they maintain for banks, governments, and other industries.
+
+**What is the average age of COBOL engineers, and why does it matter?**
+
+There isn't a reliable current average age for COBOL engineers, but older surveys suggest that many experienced COBOL programmers were 45 years old or older. This matters because as these engineers retire, banks and governments can lose people who understand and maintain their legacy systems. Finding replacements can be difficult because COBOL is not as commonly taught as newer programming languages.
+
+Source: https://www.computerworld.com/article/1528379/where-cobol-systems-go-from-here.html?utm_source
+
+**How much effort would replacing COBOL take, and why have so many replacement projects struggled?**
+
+Replacing COBOL systems can take years and cost millions of dollars because organizations have to rebuild older applications, transfer important records, and make sure transactions continue working correctly. Many replacement projects struggle because of high costs, complicated business rules, a shortage of experienced engineers, and the risk of disrupting important services. Banks and governments have to carefully test new systems before replacing the old ones.
+
+**Lab hook: In payments.dat, 125.50 is stored as 000000012550. Why would a 1959 business language store money with an implied decimal instead of a decimal point?**
+
+COBOL uses an implied decimal because it was designed to process financial records using fixed-width fields. Instead of storing a decimal point, the program already knows that the last two digits represent cents. For example, $125.50 is stored as `000000012550`. This saves space, keeps records consistent, and allows money to be calculated accurately without relying on floating-point approximations.
+
+**AI Question:** What is the average age of COBOL engineers, and why does it matter?
+
+**AI Answer:** There is no reliable current average. A 2012 Computerworld survey found that 50% of responding organizations reported an average COBOL programmer age of 45–55. This matters because retirements can create shortages of experienced programmers.
+
+**Follow-up Question:** Where in the survey does it say this?
+
+**AI Follow-up:** The survey's age breakdown shows 50% in the 45–55 range and 22% over 55.
+
+**What I double-checked:** I checked the original survey to verify the figures. They are from 2012, not 2026.
+
+**Source:** Computerworld (2012)  
+https://www.computerworld.com/article/1528418/cobol-brain-drain-survey-results.html
+
+
+**Topic 3: SWIFT Basics — Research Summary**
+
+**Read:** Wikipedia — SWIFT  
+https://en.wikipedia.org/wiki/SWIFT
+
+**Watched:** a16z — Foreign Exchange 101: What Happens When You Send Money Abroad?  
+https://www.youtube.com/watch?v=eoXdyO9oGJc
+
+**AI used:** ChatGPT
+
+**Prompts I asked the AI:**
+
+1. What is SWIFT, who introduced it, and when?
+2. Does SWIFT transfer money or financial messages, and what are correspondent banks?
+3. How is SWIFT used by banks, and what alternatives exist?
+4. Why would replacing SWIFT be difficult?
+5. What is ISO 20022, and how is it different from MT messages?
+6. What are MT103, MT202, pacs.008, and pacs.009?
+7. When did the MT/ISO 20022 coexistence period end?
+8. Why does the Balerica Legacy Bank lab still use MT103?
+
+**Claims to independently verify:**
+
+**Claim 1 — SWIFT does not transfer money.**  
+The AI explained that SWIFT sends financial messages between banks rather than moving money itself.
+
+Source to check: Wikipedia — SWIFT, Operations section.  
+https://en.wikipedia.org/wiki/SWIFT#Operations
+
+**Claim 2 — SWIFT was established in 1973.**  
+The AI explained that SWIFT was founded in Belgium in 1973 and began sending messages in 1977.
+
+Source to check: Wikipedia — SWIFT, History section.  
+https://en.wikipedia.org/wiki/SWIFT#History
+
+**Claim 3 — ISO 20022 replaced older MT payment instructions.**  
+The AI explained that the coexistence period for cross-border payment instructions ended on November 22, 2025.
+
+Source to check: Swift — ISO 20022 Implementation FAQ.  
+https://www.swift.com/standards/iso-20022/iso-20022-faqs/implementation
+
+**One thing the AI said that I double-checked:**
+
+One thing the AI said that I double-checked:** The AI said SWIFT was founded in Belgium in 1973 and started sending messages in 1977. I checked Wikipedia's History section and confirmed that SWIFT was established on May 3, 1973, and sent its first message on May 9, 1977.
+
+**Source:** Wikipedia — SWIFT, History section  
+https://en.wikipedia.org/wiki/SWIFT#History
+
+**What I learned (minimum 5 sentences):**
+
+**What I learned:**
+
+I learned that SWIFT is a financial messaging network established in Belgium in 1973 to help banks communicate internationally. SWIFT does not transfer money directly but sends secure payment instructions between financial institutions. Banks use SWIFT for international payments, financial transactions, and exchanging important information. Other systems, such as China's CIPS and Russia's SPFS, provide alternatives for certain financial activities. I also learned that replacing SWIFT would be difficult because many banks depend on its infrastructure and messaging standards. SWIFT has moved toward ISO 20022, which provides more detailed and structured payment information than older MT messages. During my Balerica Legacy Bank lab, MT103 messages were used to help us understand how traditional banking payment instructions work.
+
+**Numbers + sources:**
+
+- SWIFT established in 1973 — Wikipedia, History section.
+- First SWIFT message sent in 1977 — Wikipedia, History section.
+- ISO 20022 coexistence ended November 22, 2025 — Swift, Implementation FAQ.
+
+
+Topic 4: APIs (Application Programming Interfaces)
+
+**What I learned in my own words:**
+
+I think of an API like a self-service kiosk at a fast-food restaurant. When a customer places an order, the kiosk sends the request to the restaurant's backend system, which processes it and returns a response. The API is the communication interface that allows these systems to exchange information. From reading the MDN documentation, I learned that HTTP works through requests and responses between a client and a server. For example, a GET request can retrieve information, while a POST request can submit information for processing. In my banking lab, FastAPI provided an interface through which requests could reach the banking application's backend. This helped me understand that an API does not necessarily perform the entire operation itself, but allows different parts of an application to communicate.
+
+**AI verification:**
+
+I compared the AI explanation with MDN's *Overview of HTTP*. The documentation confirmed that clients send requests and servers return responses, and that HTTP methods such as GET and POST specify what the client wants to do. This helped me verify that my kiosk analogy was accurate while understanding the difference between an API and the backend processing the request.
+
+**Source:**
+
+MDN Web Docs — *Overview of HTTP* (updated October 8, 2026)
+
+https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Overview
+
+
+Topic 5: How Everything Connects
+
+Question 1: How does a payment move through the Balerica banking system?
+
+In the Balerica banking system, a payment can be understood as moving through several different technologies. First, a SWIFT message contains instructions about a payment between financial institutions. FastAPI acts as the modern interface that receives a payment request and connects it to the backend. The COBOL program processes the transaction using the banking rules, and fixed-width files help organize information into a format the legacy program understands. SQLite is used to store and retrieve banking data. COBOL and fixed-width files represent the older technology, while FastAPI is the modern part of the application. Banks keep both because their existing systems may already handle important transactions reliably, while modern APIs allow newer applications to communicate with them.
+
+**Note:** This is the conceptual payment flow described in the assignment. During my lab, I deployed the application and tested COBOL return codes, but I did not personally trace a live SWIFT payment through every component.
+
+Question 2: Why do organizations wrap legacy systems with APIs instead of replacing them?
+
+Organizations often keep their legacy systems because replacing everything at once can be expensive, complicated, and risky. For example, banks may have COBOL programs that have been processing transactions for decades. Instead of rebuilding the entire system, they can create an API that allows modern applications to communicate with the older software. This gives the organization time to modernize gradually without interrupting important services. However, the older system still needs maintenance and security improvements because adding an API does not automatically fix its existing problems.
+
+Question 3: How do these technologies matter to different industries?
+
+These technologies are important because different industries need reliable ways to process information, store records, and communicate between systems.
+
+**Financial:** Banks use databases and transaction-processing programs to manage accounts and payments. For example, SWIFT provides standardized messages that banks use to communicate payment instructions internationally. APIs can connect modern banking applications to older transaction systems.
+
+**Medical/Healthcare:** Hospitals use databases to store patient records and APIs to exchange information between healthcare applications. For example, a hospital can use the FHIR API standard to allow authorized software to retrieve patient information from an electronic health record system.
+
+**Academic:** Universities use databases to manage student records, grades, and course registration. For example, a university learning management system can use APIs to exchange enrollment information with its student information system.
+
+**Government:** Government agencies use older computer systems to process important public services. For example, the 2025 GAO report identifies U.S. Treasury systems that use COBOL and assembly language. These systems demonstrate why governments need to maintain existing technology while planning modernization.
+
+Not every industry uses all four technologies. SWIFT is mainly used in financial messaging, while databases and APIs are common across many industries.
+
+Question 4: What risks does the GAO report describe for systems that are decades old?
+
+According to the 2025 GAO report, operating older computer systems creates several risks for government agencies. The report identified 11 critical federal legacy systems that needed modernization, including 8 that used outdated programming languages, 4 that had unsupported hardware or software, and 7 that had known cybersecurity vulnerabilities. These problems can make systems more expensive to maintain and harder to protect against cyberattacks. Another problem is that fewer engineers may understand older programming languages such as COBOL and assembly language. If organizations fail to modernize these systems carefully, they could experience security incidents, outages, or disruptions to important services. This helped me understand why modernization requires planning instead of simply replacing software without testing it.
+
+**Source:** U.S. Government Accountability Office (2025), *Agencies Need to Plan for Modernizing Critical Decades-Old Legacy Systems*, GAO-25-107795.
+
+https://files.gao.gov/reports/GAO-25-107795/index.html
+
+Question 5: How is AI being used to understand or modernize COBOL systems, and what are its limits?
+
+AI is being used to help engineers understand older COBOL programs and modernize them more efficiently. For example, IBM's watsonx Code Assistant for Z can analyze COBOL code, explain what it does, help document existing programs, and assist with transforming parts of COBOL applications into Java. This can help engineers who are unfamiliar with older systems understand the code before making changes. However, AI can still misunderstand business rules, generate incorrect explanations, or produce code that does not behave exactly like the original program. In a banking system, even a small mistake could affect payment processing or account balances. Engineers still need to review the code, test the results, compare system behavior, and consult people who understand the application before making changes in production.
+
+**Source:** IBM, *About watsonx Code Assistant for Z* and *Generative AI in IBM watsonx Code Assistant for Z*.
+
+https://www.ibm.com/docs/en/watsonx/watsonx-code-assistant-4z/2.x
+
+
+
+
+
