@@ -73,7 +73,7 @@ I completed seven deployments on seven different EC2 instances across three days
 | 4 | 2026-11-02 | America/Toronto | i-05a8b6de9632e95e8 | 2026-11-02 23:04:42 | ec2-54-89-146-84.compute-1.amazonaws.com | [lab1_run4.jpg](screenshots/lab1_run4.jpg) | Yes |
 | 5 | 2026-11-02 | America/Toronto | i-02d3311b6820b5f87 | 2026-11-02 23:19:19 | ec2-54-145-22-226.compute-1.amazonaws.com | [lab1_run5.jpg](screenshots/lab1_run5.jpg) | Yes |
 | 6 | 2026-11-02 | America/Toronto | i-0dc82731091d782e4 | 2026-11-02 23:32:59 | ec2-3-94-169-138.compute-1.amazonaws.com | [lab1_run6.jpg](screenshots/lab1_run6.jpg) | Yes |
-| 7 | 2026-11-03 | America/Toronto | i-038cae3216777fabe | 2026-11-03 05:31:37 | ec2-54-89-190-8.compute-1.amazonaws.com | [lab1_run7.jpg](screenshots/lab1_run7.jpg) | Pending confirmation |
+| 7 | 2026-11-03 | America/Toronto | i-038cae3216777fabe | 2026-11-03 05:31:37 | ec2-54-89-190-8.compute-1.amazonaws.com | [lab1_run7.jpg](screenshots/lab1_run7.jpg) | Yes |
 
 **Deployment 1**
 
