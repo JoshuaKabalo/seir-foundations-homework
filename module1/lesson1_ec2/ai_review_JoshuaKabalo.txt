@@ -1,0 +1,65 @@
+**SEIR Foundations — Module 1, Lesson 1**
+
+**AI Review — Five Questions**
+
+1. Topic: Why did I receive exit code 130 during my COBOL lab?
+
+   What I learned: I learned that exit code 130 usually means a process was interrupted, commonly by pressing Ctrl+C. During my first EC2 deployment, I received code 130 when using `echo $?`. I ran the COBOL account lookup again and immediately checked the return code, which returned 0. This confirmed that the program worked successfully.
+
+2. Topic: Why are COBOL return codes important?
+
+   What I learned: Return codes help engineers understand whether an application completed successfully or encountered an error. During my COBOL exercises, code 0 meant success, 4 meant account not found, 8 meant a payment was rejected, and 12 meant a file error. Understanding these codes is important when troubleshooting banking applications and building automated systems.
+
+3. Topic: Why do file paths matter when running COBOL programs?
+
+   What I learned: I learned that file paths are important because applications need to locate their required files. During my lab, I ran the COBOL program from a different directory, which caused it to return code 12 because it couldn't locate `data/accounts.dat`. This helped me understand why the working directory matters when running Linux applications.
+
+4. Topic: Why are Python virtual environments important?
+
+   What I learned: Python virtual environments help manage application dependencies and prevent conflicts between different projects. During my fourth EC2 deployment, I received `uvicorn: command not found` because the application wasn't installed and configured yet. After completing the installation and activating the virtual environment, Uvicorn worked successfully.
+
+5. Topic: Why is it important to deploy multiple EC2 instances?
+
+   What I learned: Deploying multiple EC2 instances helps cloud engineers understand the process of building and configuring servers from scratch. During my homework, repeating the deployment made me more familiar with Linux commands, application installation, and troubleshooting errors. I learned that understanding how to repeat a deployment is important for building reliable cloud infrastructure.
+
+----------------------------------------
+AI FOLLOW-UP QUESTIONS
+----------------------------------------
+
+1. Topic: Why is it important to cross-check AI answers?
+
+   What I learned: I learned that AI can provide general information that doesn't always apply to a specific application. During my COBOL lab, the return codes had more specific meanings than what the AI initially explained. Comparing the answers with my lab results helped me understand why checking information is important when troubleshooting applications.
+
+2. Topic: How can I verify AI answers when I don't understand a topic?
+
+   What I learned: I learned that even when I'm unfamiliar with a topic, I can still verify information by checking official documentation, reviewing logs, testing commands, and asking experienced people for guidance. These resources can help me understand whether an AI explanation is accurate instead of relying on it completely.
+
+----------------------------------------
+AI ANSWER THAT REQUIRED VERIFICATION
+----------------------------------------
+
+The AI gave general explanations for COBOL return codes 0, 4, 8, and 12. I cross-checked these answers with my actual lab results and noticed that the codes had more specific meanings in the Balerica Legacy Bank application. For example, code 4 meant account not found, code 8 meant payment rejected, and code 12 meant a file error.
+
+This taught me that AI answers can be generally correct but still miss important details about the application I'm working on. I learned why it's important to verify information using actual results rather than assuming every explanation is accurate.
+
+----------------------------------------
+HOW I CAN VERIFY AI ANSWERS
+----------------------------------------
+
+I learned that cloud engineers can build better troubleshooting habits by testing commands, checking application logs, and comparing results with official documentation. If something doesn't make sense, I can ask my instructor or someone with more experience to explain it. I also learned that asking AI for sources is useful, but I still need to check those sources myself.
+
+----------------------------------------
+AI CONVERSATION
+----------------------------------------
+
+ChatGPT link: https://chatgpt.com/share/6ae95a43-f7a4-83e9-b17c-043e439c2ff7
+
+----------------------------------------
+SESSION REFLECTION
+----------------------------------------
+
+What went well: I was able to connect the AI explanations to the problems I encountered during my EC2 deployments. Comparing the answers with my lab results helped me better understand the technical concepts. I also learned how to question AI answers instead of accepting everything immediately.
+
+Challenges or questions: I still want to understand how COBOL return codes can be used by cloud engineers to troubleshoot applications and automate different processes. I also want to become more familiar with reading logs and understanding technical documentation.
+
+What I want to practice next: I want to learn more about how COBOL, Python, and AWS work together when deploying banking applications. I also want to practice verifying AI answers independently when troubleshooting cloud environments.
