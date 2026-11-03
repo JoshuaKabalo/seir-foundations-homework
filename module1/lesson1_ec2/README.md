@@ -128,7 +128,7 @@ During this deployment, I was more familiar with the steps because I had already
 **Public IPv4:** `54.160.239.62`  
 **Boot Time (UTC):** `2026-11-02 03:18:10`
 
-For my third deployment, I launched another brand-new EC2 instance and repeated the same installation process manually.
+For my third run, I launched another brand-new EC2 instance and repeated the same installation process manually.
 
 I connected through SSH, installed Git, cloned the course repository, and ran the Balerica Legacy Bank installer.
 
@@ -204,7 +204,7 @@ The terminal displayed `Application startup complete.`, confirming that the bank
 
 **Exact output:** `INFO:     Started server process [34135]`
 
-I captured the screenshot for `lab1_run7.jpg`. This completed my seven application startups across three days. **Termination status:** Pending confirmation.
+I captured the screenshot for `lab1_run7.jpg`. This completed my seven application startups across three days. **Termination status:** Terminated.
 
 **4. Application and System Verification**
 
@@ -327,9 +327,9 @@ During Run 4, I learned not to skip the installation and environment setup steps
 
 **Security Groups:** SSH access should be restricted to trusted IP addresses.
 
-**EC2 Termination:** I terminated Runs 1–6 after collecting the required deployment evidence. Run 7 termination is pending confirmation.
+**EC2 Termination:** I terminated all seven EC2 instances after collecting the required deployment evidence.
 
-**Resource Cleanup:** EBS volume and Elastic IP cleanup verification is still pending.
+**Resource Cleanup:** I checked for remaining EBS volumes and Elastic IP addresses after terminating the instances.
 
 **AWS Costs:** Running EC2 instances, EBS storage, and public IPv4 addresses may incur charges. I will terminate each instance after finishing its required work.
 
