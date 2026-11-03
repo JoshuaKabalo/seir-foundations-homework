@@ -1,0 +1,66 @@
+SEIR Foundations — Module 1, Lesson 1
+Balerica Legacy Bank — Spotter Assignment
+
+Student: Joshua Kabalo
+Spotter Partner: Hasan Warren
+Session Date: November 2, 2026
+
+----------------------------------------
+PART 1 — WHAT MY SPOTTER LEARNED
+----------------------------------------
+
+1. Topic: What does exit code 130 mean?
+
+   What my spotter learned: Hasan learned about exit code 130 during my first EC2 deployment. I explained that code 130 usually means a process was interrupted, commonly by pressing Ctrl+C. I ran the COBOL account lookup again and immediately checked the return code, which returned 0 and confirmed the program worked.
+
+2. Topic: Why are exit codes important?
+
+   What my spotter learned: Hasan learned that exit codes are important when troubleshooting applications. During my COBOL exercises, I tested codes 0, 4, 8, and 12. These codes helped me understand whether an operation was successful, an account wasn't found, a payment was rejected, or the application encountered a file error.
+
+3. Topic: Why are transaction amounts and relative file paths important?
+
+   What my spotter learned: Hasan learned that the banking application rejects a transaction when the payment amount is zero. During my lab, I attempted a zero-dollar payment and received code 8. I also explained that running the COBOL program from the wrong directory caused a file error because it couldn't locate `data/accounts.dat`, which returned code 12.
+
+4. Topic: Why is it important to deploy multiple EC2 instances?
+
+   What my spotter learned: Hasan learned the importance of deploying multiple EC2 instances instead of using the same instance repeatedly. I explained how I connected to fresh instances using SSH, installed Git, cloned the repository, and repeated the banking application deployment. This helped me become more familiar with the steps required to configure a new server.
+
+5. Topic: Why is it important to repeat application deployments?
+
+   What my spotter learned: Hasan learned that getting an application to work once doesn't mean it will automatically work again on another server. Repeating the deployment helps identify missing dependencies and configuration problems. I learned this during Run 4 when Uvicorn wasn't available until I completed the installation and activated the virtual environment.
+
+----------------------------------------
+PART 2 — WHAT I LEARNED FROM SPOTTING
+----------------------------------------
+
+Person I spotted: Hasan
+
+1. Topic: Why is COBOL utilized?
+
+   What I learned or shared: I learned why COBOL is utilized.
+
+2. Topic: Why cross checking AI answer's are important?
+
+   What I learned or shared: AI's answers must be checked at all times. Claude was incorrect in the assessment of window 2. During class on Saturday 10/31/26, he was able to run window 2 without adding the extra command Claude suggested (`source venv/bin/activate`). He did not receive an error message on step six.
+
+3. Topic: Why is it important to deploy multiple EC2 instances?
+
+   What I learned or shared: I learned the importance of understanding the basics of deploying an EC2 instance. This foundation made it easier to complete lab 1 by deploying multiple EC2 instances.
+
+4. Topic: Why is it important to pick the correct database?
+
+   What I learned or shared: Selecting the correct database depending on what you're attempting to build is vital. An example of this during the Udemy lesson is utilizing a graph database (Neptune) to help query things on social media websites.
+
+5. Topic: Why haven't banks replaced COBOL?
+
+   What I learned or shared: Replacing a COBOL system is very costly and time consuming.
+
+----------------------------------------
+SESSION REFLECTION
+----------------------------------------
+
+What went well: We both learned that learning how to deploy multiple EC2 instances is essential to building out the application. We both learned some interesting facts from each other. For instance, code 130 was a unique example of the many signals you can find in the system.
+
+Challenges or questions: I think one thing I really need to work on is my communication and how to simplify complex systems and ideas. Learning how to speak clearly is fundamental in order to better understand evidence that shows up when building applications.
+
+What I want to practice next: I want to do a deep dive into learning the COBOL system, how it works and why it is foundational for banking systems.
